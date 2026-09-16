@@ -1,0 +1,2034 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&family=Marmelad&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&family=Marmelad&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Water+Brush&display=swap');
+
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    background-color: #FFF5E2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    background-color: #FFF5E2;
+    flex: 1; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #411D03;
+    font-family: "Playfair Display";
+}
+p {
+    color: #411D03;
+    font-family: "Cormorant Garamond";
+}
+h2 {
+    color: #411D03;
+    text-align: center;
+    padding: 2vw 0;
+    font-family: "Playfair Display";
+}
+h3 {
+    color: #411D03;
+    text-align: center;
+    padding-bottom: 1vw;
+    font-family: "Playfair Display";
+}
+h4 {
+    text-align: left;
+    margin: 0.5vw;
+    font-family: "Playfair Display";
+}
+:root {
+    --bg_page: #FFF5E2;
+    --text: #411D03;
+    --bg_input: #D6B38D;
+    --bg_card: #EBCEAF;
+    --bg_header_footer: #D39772;
+    --accent: #B1AE69;
+}
+header {
+    background-color: #D39772;
+    padding: 1.336vw 2.671vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    list-style: none;
+}
+header a {
+    text-decoration: none;
+    color: #411D03;
+}
+
+.header_ul {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+}
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+footer {
+    background-color: #D39772;
+    padding: 1.336vw 2.671vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ul {
+    list-style: none;
+}
+footer a {
+    text-decoration: none;
+    color: #411D03;
+}
+.footer_ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.footer_center {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    flex-direction: column;
+}
+.btn_support {
+    width: 10vw;
+    height: 2.7vw;
+    color: #411D03;
+    background-color: #B1AE69;
+    border: none;
+}
+.footer_ul_right {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    flex-direction: column;
+}
+main {
+    background-color: #FFF5E2;
+}
+body {
+    background-color: #FFF5E2;
+}
+
+/*  ОБЩИЕ КЛАССЫ ДЛЯ ССЫЛОК  */
+.link-primary {
+    color: #411D03;
+    text-decoration: none;
+}
+.link-bold {
+    color: #411D03;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*  КЛАССЫ ДЛЯ ФОРМ  */
+.form-inline {
+    display: inline;
+}
+.form-edit-collection {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+.form-edit-collection.active {
+    display: flex;
+}
+
+/*  КЛАССЫ ДЛЯ СООБЩЕНИЙ  */
+.message-success-green {
+    text-align: center;
+    color: #4CAF50;
+    font-weight: bold;
+}
+.message-error-red {
+    color: red;
+    font-weight: bold;
+    margin: 1vw;
+}
+.message-support {
+    text-align: center;
+    font-weight: bold;
+    margin: 1vw;
+}
+.message-support-success {
+    color: green;
+}
+.message-support-error {
+    color: red;
+}
+.message-complaint {
+    text-align: center;
+    color: #B1AE69;
+    font-weight: bold;
+}
+
+/*  КЛАССЫ ДЛЯ ИЗОБРАЖЕНИЙ  */
+.img-responsive {
+    max-width: 100%;
+}
+.img-collection-cover {
+    max-width: 10vw;
+    max-height: 8vw;
+    object-fit: cover;
+    border-radius: 0.3vw;
+    margin-bottom: 0.5vw;
+}
+.img-collection-list {
+    max-width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    border-radius: 0.3vw;
+}
+.days_div img{
+    width: auto; 
+    height: 7vw; 
+    border-radius: 0.3vw;
+}
+.img-api-meal {
+    max-width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.img-recipe-main {
+    max-width: 100%;
+    height: auto;
+}
+
+/*  КЛАССЫ ДЛЯ ТЕКСТА  */
+.text-center-full {
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+.text-center-margin {
+    text-align: center;
+    width: 100%;
+    margin-top: 2vw;
+}
+.text-author {
+    font-size: 0.8vw;
+}
+.text-chef-name {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-accent {
+    font-size: 0.9vw;
+    color: #B1AE69;
+}
+.text-warning {
+    font-size: 0.9vw;
+    color: #D39772;
+}
+.text-error-center {
+    text-align: center;
+    color: red;
+}
+.text-current-file {
+    font-size: 0.9vw;
+    color: #411D03;
+}
+.text-heading-edit {
+    color: #411D03;
+    margin-bottom: 1vw;
+}
+.text-menu-empty {
+    font-weight: normal;
+    font-size: 0.8vw;
+}
+.text-api-details {
+    margin-top: 0.5vw;
+    font-size: 0.85vw;
+}
+.text-api-list {
+    padding-left: 1.5vw;
+}
+.text-api-instructions {
+    font-weight: bold;
+    margin-top: 0.5vw;
+}
+.text-stat-resolved {
+    color: #B1AE69;
+}
+.text-stat-unresolved {
+    color: #D39772;
+}
+
+/*  КЛАССЫ ДЛЯ КНОПОК  */
+.btn-cancel {
+    background-color: #D39772;
+    color: white;
+    margin-left: 1vw;
+}
+.btn-create-coll-menu {
+    color: #B1AE69;
+    font-weight: bold;
+    border-top: 1px solid #D39772;
+    margin-top: 0.3vw;
+    padding-top: 0.3vw;
+}
+.btn-find-submit {
+    width: 100%;
+    margin-top: 1vw;
+}
+.btn-find-reset {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0.5vw;
+}
+.btn-save-profile {
+    width: 100%;
+    margin-top: 1vw;
+}
+
+/*  КЛАССЫ ДЛЯ КОНТЕЙНЕРОВ  */
+.coll-menu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.grid-two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+}
+.form-support {
+    max-width: 50vw;
+    margin: 2vw auto;
+}
+.form-edit-margin {
+    margin-top: 2vw;
+}
+.td-center-padding {
+    text-align: center;
+    padding: 2vw;
+}
+
+/*  КЛАССЫ ДЛЯ INPUT  */
+.input-collection-name {
+    width: 20vw;
+}
+.input-file-collection {
+    width: 20vw;
+    height: auto;
+    padding: 0.5vw;
+}
+.input-file-auto {
+    height: auto;
+}
+.textarea-support {
+    height: 15vw;
+}
+
+/*  КЛАССЫ ДЛЯ ДЕТАЛЕЙ API  */
+.api-details {
+    margin-top: 0.5vw;
+    padding: 0.5vw;
+    background-color: #FFF5E2;
+}
+.api-summary {
+    cursor: pointer;
+    color: #411D03;
+    font-weight: bold;
+}
+
+/*  КЛАССЫ ДЛЯ LABEL  */
+.label-bold {
+    color: #411D03;
+    font-weight: bold;
+}
+
+/*  Главная index.html  */
+.days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+.days_div {
+    text-align: center;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+    pointer-events: none; /* Жестко блокируем клики по невидимым слайдам */
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 100; /* Поднимаем активный слайд на самый верх */
+    pointer-events: auto; /* Разрешаем клики только для активного */
+}
+
+.season-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 101; /* Ссылка будет поверх всех элементов внутри активного слайда */
+    pointer-events: auto;
+}
+.season {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+.season_img {
+    position: relative;
+    width: 70%;
+    height: 30vw;
+    overflow: hidden;
+    border-radius: 0.5vw;
+}
+.season_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.season_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(65,29,3,0.9), transparent);
+    padding: 2vw;
+    color: #FFF5E2;
+    text-align: end;
+}
+.slider-btn {
+    cursor: pointer;
+    width: 3vw;
+    max-width: 40px;
+}
+.slider-dot {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.slider-dot:hover {
+    background-color: #B1AE69 !important;
+}
+aside {
+    background-color: #EBCEAF;
+    text-align: center;
+}
+.aside_categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 3vw 0;
+    margin-top: 1vw;
+}
+.aside_world {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+}
+.btn_find {
+    padding: 0.5vw;
+    height: 2.7vw;
+    color: #411D03;
+    background-color: #B1AE69;
+    border: none;
+}
+aside a {
+    text-decoration: none;
+    color: #411D03;
+}
+
+.catalog_wrapper {
+    display: flex;
+    gap: 3vw;
+    margin: 0 3vw;
+    align-items: flex-start;
+}
+
+.catalog_wrapper .catalog {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin: 0;
+}
+
+.catalog_wrapper aside {
+    flex: 0 0 18vw;
+    background-color: #EBCEAF;
+    padding: 1.5vw;
+    border-radius: 0.5vw;
+    text-align: center;
+    position: sticky;
+    top: 2vw;
+}
+
+.card_img img {
+    width: 17vw;
+    height: 12vw;
+}
+.aside_categories_div img {
+    width: 45px;
+}
+.aside_world img {
+    width: 50px;
+}
+
+
+/*  Коллекции collection.html  */
+.collection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1vw 5vw;
+    margin: 0 3vw 0 3vw;
+}
+.collection_div {
+    width: 18vw;
+    padding: 1vw;
+}
+.collection_up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.collection_btn_favorite {
+    border: none;
+    background-color: #FFF5E2;
+}
+.collection_img {
+    text-align: center;
+}
+
+.collection_up_left_text a {
+    color: #411D03; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.collection_up_left_autor {
+    font-size: 0.8vw;
+}
+
+/*  Шеф-повара chefs.html  */
+.chefs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    margin: 0 3vw 1vw 3vw;
+}
+.chefs_img {
+    text-align: center;
+}
+.chefs_div {
+    background-color: #EBCEAF;
+    padding: 1vw;
+}
+.chefs_down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1vw;
+    align-items: center;
+}
+.chefs_btn_favorite {
+    border: none;
+    background-color: #EBCEAF;
+}
+
+/*  Блог blog.html  */
+.blog {
+    background-color: #EBCEAF;
+    padding: 1vw;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10vw 2vw;
+    gap: 3vw;
+}
+.blog_img {
+    text-align: center;
+}
+.blog_text_up {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: center;
+}
+
+/*  поиск find.html  */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 3vw;
+    gap: 5vw;
+}
+.card {
+    background-color: #EBCEAF;
+    padding: 1vw;
+    margin-bottom: 1vw;
+}
+.card_img {
+    text-align: center;
+}
+.card_center {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.card_tags {
+    display: flex;
+    gap: 1vw;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 1.5vw;
+}
+.btn_card {
+    border: none;
+    background-color: #EBCEAF;
+}
+.card_tag {
+    background-color: #B1AE69;
+    width: max-content;
+    padding: 0.5vw;
+    text-align: center;
+}
+label {
+    text-align: left;
+}
+select multiple {
+    height: 3vw;
+    color: #411D03;
+    background-color: #D6B38D;
+    border: none;
+    border-radius: 0.2vw;
+    margin: 0.3vw 0;
+}
+select {
+    height: 3vw;
+    color: #411D03;
+    background-color: #D6B38D;
+    border: none;
+    border-radius: 0.2vw;
+    margin: 0.3vw 0;
+    width: 100%;
+}
+option {
+    color: #411D03;
+    background-color: #D6B38D;
+    border: none;
+}
+.find_filters {
+    color: #411D03;
+}
+
+/*  Шеф-повар chef.html  */
+.chef {
+    padding: 1vw;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10vw;
+    gap: 3vw;
+}
+.chef_img {
+    text-align: center;
+}
+.chef_text_up {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+.chef_btn_favorite {
+    border: none;
+    background-color: #FFF5E2;
+}
+
+/*  статья article.html  */
+.article_img {
+    text-align: center;
+}
+.article_text {
+    margin: 2vw 7vw;
+}
+
+/*  рецепт recipe.html  */
+.recipe_name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+.recipe_btn {
+    border: none;
+    background-color: #FFF5E2;
+}
+.recipe_info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.recipe_tags {
+    gap: 1vw;
+    display: flex;
+    flex-direction: column;
+}
+.recipe_tag {
+    background-color: #B1AE69;
+    width: max-content;
+    padding: 0.5vw;
+    text-align: center;
+}
+.recipe_text {
+    margin: 2vw 7vw;
+}
+.table_ht {
+    border: #B1AE69;
+}
+tr {
+    display: flex;
+    align-items: center;
+    margin: 0.6vw 0 0;
+}
+th {
+    margin: 0 0.5vw;
+}
+td {
+    margin: 0 1vw;
+}
+
+/*  Авторизация / Регистрация  */
+.avtoriz {
+    list-style: none;
+    text-align: center;
+}
+.avtoriz a {
+    text-decoration: none;
+    color: #411D03;
+}
+.form_all {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw;
+}
+.form_btn {
+    display: flex;
+    flex-direction: row;
+    margin: 1vw 1vw;
+}
+input {
+    height: 3vw;
+    color: #411D03;
+    background-color: #D6B38D;
+    border: none;
+    border-radius: 0.2vw;
+    margin: 0.3vw 0;
+}
+.send {
+    height: 3vw;
+    color: #411D03;
+    background-color: #B1AE69;
+    border: none;
+    border-radius: 0.2vw;
+    margin: 0.3vw 0;
+    padding: 0 1vw;
+}
+
+/*  л/к - избранное  */
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account ul {
+    list-style: none;
+}
+.account_ul {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+}
+.account a {
+    text-decoration: none;
+    color: #411D03;
+}
+
+/*  л/к - коллекции  */
+.create_collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn_create_collection {
+    color: #411D03;
+    background-color: #B1AE69;
+    border: none;
+    padding: 1vw;
+    font-family: "Cormorant Garamond";
+    width: auto;
+    display: block; 
+    text-align: center; 
+    text-decoration: none; 
+    margin-top: 0.5vw;
+}
+
+/*  поддержка account.html  */
+.account_info_up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logout_wrap {
+    text-align: center;
+    margin: 2vw;
+    font-size: smaller;
+}
+.logout {
+    width: auto;
+    color: #411D03;
+    background-color: #B1AE69;
+    border: none;
+    padding: 1vw;
+}
+
+/*  поддержка support.html  */
+textarea {
+    height: 15vw;
+    color: #411D03;
+    background-color: #D6B38D;
+    border: none;
+    border-radius: 0.2vw;
+}
+
+/*  админ панель  */
+.admin_create {
+    text-align: end;
+    margin: 0 7vw 1vw 0;
+}
+
+/*  Ингредиенты  */
+.ingredients-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.8vw;
+    margin-top: 0.5vw;
+}
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    padding: 0.5vw;
+    background-color: rgba(214, 179, 141, 0.3);
+    border-radius: 0.3vw;
+    transition: background-color 0.2s;
+}
+.ingredient-item:hover {
+    background-color: rgba(214, 179, 141, 0.5);
+}
+.ingredient-item input[type="checkbox"] {
+    width: 1.2vw;
+    height: 1.2vw;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #B1AE69;
+}
+.ingredient-name {
+    flex: 1;
+    font-size: 0.9vw;
+    color: #411D03;
+    cursor: pointer;
+}
+.ingredient-qty {
+    width: 8vw !important;
+    padding: 0.3vw 0.5vw !important;
+    font-size: 0.85vw;
+    text-align: center;
+}
+.ingredient-qty::placeholder {
+    font-size: 0.75vw;
+    opacity: 0.7;
+}
+.edit-ingredients-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.8vw;
+    margin-top: 0.5vw;
+}
+.edit-ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    padding: 0.5vw;
+    background-color: rgba(214, 179, 141, 0.3);
+    border-radius: 0.3vw;
+}
+.edit-ingredient-item input[type="checkbox"] {
+    width: 1.2vw;
+    height: 1.2vw;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #B1AE69;
+}
+.edit-ingredient-name {
+    flex: 1;
+    font-size: 0.9vw;
+    color: #411D03;
+    cursor: pointer;
+}
+.edit-ingredient-qty {
+    width: 8vw !important;
+    padding: 0.3vw 0.5vw !important;
+    font-size: 0.85vw;
+    text-align: center;
+}
+
+/*  account.php  */
+.account_page {
+    max-width: 60vw;
+    margin: 0 auto;
+    padding: 0 0 2vw;
+}
+.account_info {
+    background-color: #EBCEAF;
+    padding: 2vw;
+    border-radius: 0.5vw;
+    margin-bottom: 2vw;
+}
+.account_info h3 {
+    color: #411D03;
+    margin-bottom: 1vw;
+    text-align: left;
+}
+.info_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5vw 0;
+    border-bottom: 1px solid #D6B38D;
+}
+.info_row:last-child {
+    border-bottom: none;
+}
+.info_label {
+    font-weight: bold;
+    color: #411D03;
+}
+.info_value {
+    color: #411D03;
+}
+.edit_form {
+    display: none;
+    background-color: #EBCEAF;
+    padding: 2vw;
+    border-radius: 0.5vw;
+    margin-bottom: 2vw;
+}
+.edit_form.active {
+    display: block;
+}
+.edit_form h3 {
+    color: #411D03;
+    margin-bottom: 1vw;
+    text-align: left;
+}
+.form_group {
+    margin-bottom: 1vw;
+}
+.form_group label {
+    display: block;
+    margin-bottom: 0.3vw;
+    color: #411D03;
+    font-weight: bold;
+}
+.form_group input {
+    width: 100%;
+    padding: 0.8vw;
+    background-color: #D6B38D;
+    border: none;
+    border-radius: 0.2vw;
+    color: #411D03;
+    box-sizing: border-box;
+}
+.message {
+    padding: 1vw;
+    border-radius: 0.3vw;
+    margin-bottom: 1vw;
+    text-align: center;
+    font-weight: bold;
+}
+.message.success {
+    background-color: #B1AE69;
+    color: #411D03;
+}
+.message.error {
+    background-color: #D39772;
+    color: #FFF5E2;
+}
+.logout_section {
+    text-align: center;
+    padding: 2vw;
+    background-color: #EBCEAF;
+    border-radius: 0.5vw;
+}
+.logout_btn {
+    display: inline-block;
+    padding: 1vw 3vw;
+    background-color: #D39772;
+    color: #FFF5E2;
+    text-decoration: none;
+    border-radius: 0.3vw;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.logout_btn:hover {
+    background-color: #B1AE69;
+    color: #411D03;
+}
+.nav_links {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 2vw;
+}
+.nav_links a {
+    color: #411D03;
+    text-decoration: none;
+    padding: 0.5vw 1vw;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+.nav_links a:hover {
+    border-bottom-color: #B1AE69;
+}
+.nav_links a.active {
+    border-bottom-color: #B1AE69;
+    font-weight: bold;
+}
+.edit_btn_wrapper {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+/*  admin_article.php, admin_chefs.php, admin_recipes.php  */
+.create_form {
+    display: none;
+    background-color: #EBCEAF;
+    padding: 2vw;
+    margin: 0 2vw 2vw;
+    border-radius: 0.5vw;
+}
+.create_form.active {
+    display: block;
+}
+.form_group textarea {
+    width: 100%;
+}
+.admin_table {
+    margin: 2vw;
+    overflow-x: auto;
+}
+.admin_table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #EBCEAF;
+}
+.admin_table th,
+.admin_table td {
+    padding: 1vw;
+    text-align: left;
+    border-bottom: 1px solid #D39772;
+}
+.admin_table th {
+    background-color: #B1AE69;
+    color: #411D03;
+}
+.admin_table tr:hover {
+    background-color: #D6B38D;
+}
+.btn_small {
+    padding: 0.5vw 1vw;
+    margin: 0 0.2vw;
+    border: none;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn_edit {
+    background-color: #B1AE69;
+    color: white;
+}
+.btn_delete {
+    background-color: #D39772;
+    color: white;
+}
+
+/*  admin_complaints.php  */
+.admin_stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    margin: 2vw;
+}
+.stat_card {
+    background-color: #EBCEAF;
+    padding: 2vw;
+    text-align: center;
+    border-radius: 0.5vw;
+}
+.stat_card h3 {
+    color: #411D03;
+    margin-bottom: 0.5vw;
+}
+.stat_card p {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #411D03;
+}
+.admin_table tr.resolved {
+    opacity: 0.6;
+    background-color: #C9B896;
+}
+.btn_resolve {
+    background-color: #B1AE69;
+    color: white;
+}
+.btn_unresolve {
+    background-color: #FFF5E2;
+    color: #411D03;
+}
+.complaint_details {
+    margin-top: 0.5vw;
+    padding: 0.5vw;
+    background-color: #FFF5E2;
+    border-radius: 0.2vw;
+    font-size: 0.9vw;
+}
+.complaint_short {
+    font-weight: bold;
+    color: #411D03;
+}
+.complaint_full {
+    margin-top: 0.5vw;
+    color: #411D03;
+    line-height: 1.4;
+}
+.user_info {
+    font-size: 0.9vw;
+    color: #411D03;
+}
+.status_badge {
+    display: inline-block;
+    padding: 0.3vw 0.8vw;
+    border-radius: 0.3vw;
+    font-weight: bold;
+}
+.status_resolved {
+    color: #B1AE69;
+}
+.status_unresolved {
+    color: #D39772;
+}
+
+/*  admin.php  */
+.admin_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 2vw;
+    background-color: #EBCEAF;
+    margin: 2vw;
+    border-radius: 0.5vw;
+}
+.admin_nav a {
+    padding: 1vw;
+    background-color: #B1AE69;
+    color: #411D03;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.2vw;
+}
+.admin_nav a:hover {
+    background-color: #D39772;
+}
+.admin_stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    margin: 2vw;
+}
+
+/*  find.php  */
+.find_layout {
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+}
+.find_main {
+    flex: 1;
+}
+.find_aside {
+    flex: 0 0 20vw;
+    background-color: #EBCEAF;
+    padding: 1.5vw;
+    border-radius: 0.5vw;
+    height: fit-content;
+}
+.filter-toggle-btn {
+    display: none;
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    z-index: 999;
+    background-color: #B1AE69;
+    color: #411D03;
+    border: none;
+    padding: 0.8vw 1.5vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 3.5vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.filter-toggle-btn img {
+    width: 5vw;
+    max-width: 20px;
+}
+
+/* Затемнение фона при открытом фильтре */
+.filter-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 998;
+}
+
+.filter-overlay.active {
+    display: block;
+}
+
+/* Кнопка закрытия фильтра */
+.filter-close-wrapper {
+    display: none;
+    padding: 1vw;
+    border-bottom: 1px solid #D39772;
+    margin-bottom: 1vw;
+}
+
+.filter-close-btn {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    background-color: #D39772;
+    color: #FFF5E2;
+    border: none;
+    padding: 1vw 2vw;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 4vw;
+    width: 100%;
+    justify-content: center;
+}
+
+.filter-close-btn img {
+    width: 5vw;
+    max-width: 20px;
+}
+
+.coll-dropdown {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #EBCEAF;
+    border: 1px solid #D39772;
+    border-radius: 0.3vw;
+    padding: 0.5vw;
+    min-width: 14vw;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.coll-dropdown p {
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+    font-size: 0.85vw;
+}
+.coll-dropdown button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #411D03;
+    cursor: pointer;
+    padding: 0.3vw;
+    font-size: 0.85vw;
+}
+.coll-dropdown button:hover {
+    background-color: #D6B38D;
+    border-radius: 0.2vw;
+}
+.coll-create-form {
+    display: none;
+    margin-top: 0.5vw;
+    padding-top: 0.5vw;
+    border-top: 1px solid #D39772;
+}
+.coll-create-form input[type="text"] {
+    width: 100%;
+    margin-bottom: 0.3vw;
+    font-size: 0.8vw;
+}
+.coll-create-form button {
+    width: 100%;
+    background-color: #B1AE69;
+    color: #411D03;
+    border: none;
+    padding: 0.3vw;
+    cursor: pointer;
+    font-size: 0.8vw;
+    border-radius: 0.2vw;
+}
+.range-filter {
+    margin-bottom: 1.5vw;
+}
+.range-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
+}
+.range-inputs input[type="range"] {
+    width: 100%;
+    height: 0.5vw;
+    background: #D6B38D;
+    border-radius: 0.3vw;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+.range-inputs input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2vw;
+    height: 1.2vw;
+    background: #B1AE69;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #411D03;
+}
+.range-inputs input[type="range"]::-moz-range-thumb {
+    width: 1.2vw;
+    height: 1.2vw;
+    background: #B1AE69;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #411D03;
+}
+.range-inputs input[type="range"]:hover::-webkit-slider-thumb {
+    background: #D39772;
+}
+
+/* Обертка для заголовка и кнопки фильтров */
+.find_title_row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 3vw; /* Отступы как у каталога */
+    margin-bottom: 1vw;
+}
+
+.find_title_row h2 {
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Выравнивание по левому краю, чтобы кнопка была справа */
+}
+
+/* Кнопка открытия фильтров (скрыта на десктопе) */
+.filter-toggle-btn { 
+    color: #411D03;
+    background-color: #B1AE69;
+    border: none;
+    padding: 1vw;
+    font-family: "Cormorant Garamond";
+    width: auto;
+    display: block; 
+    text-align: center; 
+    text-decoration: none; 
+    margin-top: 0.5vw;
+}
+
+.filter-toggle-btn img {
+    width: 1.2vw;
+    max-width: 16px;
+}
+
+.filter-close-btn {
+    color: #411D03;
+    background-color: #B1AE69;
+    border: none;
+    padding: 1vw;
+    font-family: "Cormorant Garamond";
+    width: auto;
+    display: block; 
+    text-align: center; 
+    text-decoration: none; 
+    margin-top: 0.5vw;
+}
+
+
+
+/* ========================================
+   МОБИЛЬНАЯ ВЕРСИЯ (375px)
+   ======================================== */
+@media (max-width: 375px) {
+    /* Header */
+    header {
+        padding: 2vw 3vw;
+    }
+    
+    .header_center {
+        width: 100%;
+    }
+    
+    .header_ul {
+        flex-direction: column;
+        gap: 2vw;
+        align-items: center;
+    }
+    
+    .header_right {
+        width: 100%;
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    header a {
+        font-size: small;
+    }
+    
+    header a img {
+        width: 10vw;
+    }
+    
+    /* Footer */
+    footer {
+        flex-direction: column;
+        gap: 3vw;
+        padding: 5vw 3vw;
+    }
+
+    footer a {
+        font-size: small;
+    }
+    
+    .footer_left,
+    .footer_center,
+    .footer_right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer_ul {
+        flex-direction: column;
+        gap: 2vw;
+    }
+    
+    .footer_ul_right {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3vw;
+    }
+    
+    /* Main sections */
+    h2 {
+        font-size: 5vw;
+        padding: 1vw 0;
+    }
+    
+    h3 {
+        font-size: 4.5vw;
+    }
+    
+    /* Days */
+    .days {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+        padding: 0 3vw;
+    }
+    
+    .days_div img {
+        height: 20vw;
+        width: 40vw;
+    }
+    
+    /* Season slider */
+    .season {
+        gap: 2vw;
+        padding: 0 3vw;
+    }
+    
+    .season_img {
+        width: 100% !important;
+        height: 60vw !important;
+    }
+    
+    .slider-arrow {
+        height: 8vw;
+        width: auto;
+    }
+    
+    .season_overlay {
+        font-size: 3vw;
+        padding: 3vw;
+    }
+    
+    .season_overlay h3 {
+        font-size: 4vw;
+    }
+    
+    /* Catalog */
+    .catalog {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .catalog_wrapper {
+        flex-direction: column;
+        gap: 2vw;
+        margin: 0;
+        padding: 0 1vw;
+    }
+    
+    .catalog_wrapper .catalog {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+        margin: 0;
+    }
+    
+    .card {
+        padding: 2vw;
+    }
+    
+    .card_img img {
+        width: 100% !important;
+        height: auto;
+    }
+    
+    .card_center {
+        gap: 2vw;
+    }
+    
+    .card_tags {
+        align-items: flex-start;
+        gap: 1vw;
+    }
+    
+    .card_tag {
+        font-size: small;
+        padding: 1vw 2vw;
+    }
+    
+    /* Collections */
+    .collection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+        margin: 0 3vw;
+    }
+    
+    .collection_div {
+        width: 100% !important;
+        padding: 2vw;
+    }
+
+    .collection_up_left_autor {
+        font-size: x-small;
+    }
+    
+    /* Chefs */
+    .chefs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .chefs_div {
+        padding: 2vw;
+    }
+    
+    /* Blog */
+    .blog {
+        width: 90%;
+        margin: 0 3vw 3vw;
+        flex-direction: column;
+        gap: 2vw;
+        padding: 2vw;
+    }
+    
+    .blog_img img {
+        width: 100% !important;
+        height: auto;
+    }
+    
+    .blog_text_down p{
+        font-size: small;
+    }
+    
+    /* Chef page */
+    .chef {
+        width: 100% !important;
+        margin: 0 3vw;
+        flex-direction: column;
+        gap: 3vw;
+        padding: 2vw;
+    }
+
+    .chefs_down {
+        font-size: small;
+    }
+    
+    .chef_img img {
+        width: 100% !important;
+        height: auto;
+    }
+    
+    /* Recipe page */
+    .recipe_info {
+        flex-direction: column;
+        gap: 3vw;
+        padding: 0 3vw;
+    }
+    
+    .recipe_tags {
+        width: 100%;
+    }
+    
+    .recipe_text {
+        margin: 3vw;
+        font-size: 3.5vw;
+    }
+    
+    /* Article page */
+    .article_img img {
+        width: 100% !important;
+        height: auto;
+    }
+    
+    .article_text {
+        margin: 3vw;
+        font-size: 3.5vw;
+    }
+    
+    /* Account */
+    .account {
+        padding: 0 3vw;
+    }
+    
+    .account_ul {
+        flex-direction: column;
+        gap: 2vw;
+        align-items: center;
+    }
+    
+    .account_page {
+        max-width: 100%;
+        padding: 0 3vw;
+    }
+    
+    .account_info {
+        padding: 3vw;
+    }
+    
+    .info_row {
+        flex-direction: column;
+        gap: 1vw;
+        align-items: flex-start;
+    }
+    
+    /* Forms */
+    .form_all {
+        margin: 3vw !important;
+        padding: 3vw;
+    }
+    
+    input,
+    select,
+    textarea {
+        width: 100% !important;
+        font-size: 3.5vw;
+        height: 10vw;
+    }
+    
+    .send {
+        width: 100%;
+        height: 12vw;
+        font-size: 4vw;
+    }
+    
+    /* Admin tables */
+    .admin_table {
+        overflow-x: auto;
+        margin: 3vw 2vw;
+    }
+    
+    .admin_table table {
+        min-width: 600px;
+        font-size: 3vw;
+    }
+    
+    .admin_stats {
+        grid-template-columns: 1fr;
+        gap: 3vw;
+        margin: 3vw;
+    }
+    
+    .stat_card {
+        padding: 3vw;
+    }
+    
+    .stat_card h3 {
+        font-size: 4vw;
+    }
+    
+    .stat_card p {
+        font-size: 6vw;
+    }
+    
+    /* Find page */
+    .find_layout {
+        flex-direction: column;
+        padding: 3vw;
+    }
+    
+    .find_aside {
+        width: 100% !important;
+        margin: 0;
+        padding: 3vw;
+    }
+    .filter-toggle-btn {
+        display: flex;
+    }
+    
+    .filter-close-wrapper {
+        display: block;
+    }
+    
+    .find_aside {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: #EBCEAF;
+        z-index: 999;
+        overflow-y: auto;
+        transition: right 0.3s ease;
+        padding: 2vw;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+    
+    .find_aside.active {
+        right: 0;
+    }
+    
+    .find_filters h3 {
+        margin-top: 0;
+    }
+
+    .find_main {
+        width: 100%;
+    }
+    
+    .range-filter {
+        margin-bottom: 3vw;
+    }
+    
+    .range-inputs input[type="range"] {
+        height: 1.5vw;
+    }
+    
+    /* Buttons */
+    .btn_support {
+        width: 100% !important;
+        height: 10vw;
+        font-size: 3.5vw;
+    }
+    
+    .btn_create_collection {
+        font-size: 4vw;
+    }
+    
+    .btn_find {
+        width: 100%;
+        height: 10vw;
+        font-size: 3.5vw;
+    }
+    
+    /* Aside */
+    aside {
+        width: 100% !important;
+        margin: 3vw auto;
+        padding: 3vw;
+    }
+    
+    .aside_categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+    }
+    
+    .aside_world {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2vw;
+    }
+    
+    .aside_categories_div img,
+    .aside_world img {
+        max-width: 13vw;
+    }
+    
+    /* Collection dropdown */
+    .coll-dropdown {
+        min-width: 80vw;
+        left: -20vw;
+    }
+    
+    /* Ingredients */
+    .ingredients-list,
+    .edit-ingredients-list {
+        grid-template-columns: 1fr;
+        gap: 2vw;
+    }
+    
+    .ingredient-item,
+    .edit-ingredient-item {
+        padding: 2vw;
+        font-size: 3vw;
+    }
+    
+    /* Support page */
+    .form_all {
+        max-width: 100% !important;
+        margin: 3vw !important;
+    }
+    
+    textarea {
+        height: 30vw !important;
+    }
+    
+    /* Login/Register */
+    .avtoriz {
+        padding: 3vw;
+    }
+    
+    .avtoriz h2 {
+        font-size: 6vw;
+    }
+}
+
+/* ========================================
+   ПЛАНШЕТНАЯ ВЕРСИЯ (770px)
+   ======================================== */
+@media (min-width: 375px) and (max-width: 770px) {
+    
+    /* --- Header --- */
+    header {
+        padding: 2vw 4vw;
+    }
+    header img[width="65vw"] {
+        width: 50vw !important; /* Логотип не слишком большой */
+    }
+    .header_ul {
+        gap: 2vw;
+    }
+    .header_right img {
+        width: 8vw !important;
+    }
+
+    /* --- Typography --- */
+    h2 {
+        font-size: 6vw;
+        padding: 3vw 0;
+    }
+    h3 {
+        font-size: 5vw;
+    }
+
+    /* --- Сетки в 2 колонки (Рецепты, Коллекции, Шефы) --- */
+    .catalog, 
+    .catalog_wrapper .catalog {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 3vw;
+        margin: 0 4vw;
+    }
+    
+    .collection, 
+    .chefs {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 4vw;
+        margin: 0 4vw;
+    }
+
+    /* Картинки в карточках квадратные и на всю ширину */
+    .card_img img {
+        width: 100% !important;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    /* --- Блог --- */
+    .blog {
+        width: 90% !important;
+        margin: 0 auto 4vw;
+        flex-direction: column; /* Картинка сверху, текст снизу */
+        gap: 3vw;
+    }
+    .blog_img img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    /* --- Страницы Шефа и Рецепта --- */
+    .chef, 
+    .recipe_info {
+        flex-direction: column;
+        width: 90% !important;
+        margin: 0 auto;
+        gap: 4vw;
+    }
+    .chef_img img, 
+    .recipe_info img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    /* --- Личный кабинет --- */
+    .account_ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3vw;
+    }
+    .account_page {
+        max-width: 90%;
+    }
+
+    /* --- Формы --- */
+    .form_all {
+        margin: 0 4vw !important;
+    }
+    input, select, textarea {
+        width: 100% !important;
+    }
+
+    /* --- Страница поиска (find.php) и Кнопка Фильтров --- */
+    .find_layout {
+        flex-direction: column;
+        padding: 2vw;
+    }
+
+    /* Обертка для заголовка и кнопки */
+    .find_title_row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 2vw;
+    }
+    .find_title_row h2 {
+        margin: 0;
+        text-align: left;
+    }
+
+    /* Показываем кнопку "Фильтры" */
+    .filter-toggle-btn {
+        display: flex !important;
+        font-size: 4vw;
+        padding: 2vw 4vw;
+    }
+
+    /* Превращаем блок фильтров в выезжающую боковую панель */
+    .find_aside {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Спрятана за экраном */
+        width: 70%;
+        max-width: 350px;
+        height: 100vh;
+        background-color: #EBCEAF;
+        z-index: 999;
+        overflow-y: auto;
+        transition: right 0.3s ease;
+        padding: 4vw;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+    .find_aside.active {
+        right: 0; /* Выезжает при клике */
+    }
+
+    /* Показываем кнопку закрытия внутри панели */
+    .filter-close-wrapper {
+        display: block;
+    }
+
+    /* --- Боковая панель на главной (Категории/Кухни) --- */
+    aside {
+        width: 90% !important;
+        margin: 4vw auto;
+    }
+    .aside_categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
